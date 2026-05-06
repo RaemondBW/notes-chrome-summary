@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sqlite3 *)",
+      "Bash(osascript *)",
+      "Bash(mktemp *)",
+      "Bash(rm -f /tmp/*)"
+    ]
+  }
+}
