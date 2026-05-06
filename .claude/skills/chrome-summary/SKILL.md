@@ -12,7 +12,7 @@ Reads Chrome's local history SQLite database, filters out noise (social feeds, v
 
 ## Arguments
 
-- **No argument** — summarize today's browsing (`date('now', 'localtime')`)
+- **No argument** — summarize yesterday's browsing (so running once a day always fills in the previous day)
 - **`YYYY-MM-DD`** — summarize a specific past day
 - **`--force`** — overwrite the note if one for that date already exists (default: skip if it exists)
 
@@ -46,7 +46,7 @@ for arg in $ARGS; do
 done
 
 if [ -z "$TARGET_DATE" ]; then
-  TARGET_DATE=$(date +%Y-%m-%d)
+  TARGET_DATE=$(date -v-1d +%Y-%m-%d)
 fi
 
 echo "target_date=$TARGET_DATE force=$FORCE"

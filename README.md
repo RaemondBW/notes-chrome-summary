@@ -50,7 +50,7 @@ The `.claude/skills/` folder is picked up automatically. The skills will appear 
 
 ## Usage
 
-**Summarize today's browsing:**
+**Summarize yesterday's browsing** (default — run once a day to keep up):
 ```
 /chrome-summary
 ```
