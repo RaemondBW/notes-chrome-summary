@@ -37,14 +37,21 @@ The skill writes notes via AppleScript, which requires Automation permission.
 
 If you see `Not authorized to send Apple events to Notes (-1743)`, this permission is missing.
 
-**4. Open the project in Claude Code**
+**4. Install the skill**
+
+Copy `SKILL.md` into your Claude Code skills directory:
 
 ```bash
-cd ~/Documents/chrome-to-memory
-claude
+# Install into a specific project
+mkdir -p /your/project/.claude/skills/chrome-summary
+cp SKILL.md /your/project/.claude/skills/chrome-summary/SKILL.md
+
+# Or install globally (available in every project)
+mkdir -p ~/.claude/skills/chrome-summary
+cp SKILL.md ~/.claude/skills/chrome-summary/SKILL.md
 ```
 
-The `.claude/skills/` folder is picked up automatically. `/chrome-summary` will appear in Claude Code's slash command list.
+`/chrome-summary` will appear in Claude Code's slash command list once the skill is in place.
 
 ## Installing notes-wiki (optional)
 
